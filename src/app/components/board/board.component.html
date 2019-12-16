@@ -1,0 +1,17 @@
+
+<h3>Players:</h3>
+<div *ngIf="boardGame?.participants.length > 0">
+  <div *ngFor="let player of boardGame?.participants">
+    {{player.name}} - {{player.color}}
+  </div>
+</div>
+<h4>Round: {{boardGame?.round}}</h4>
+<div *ngIf="boardGame?.squares.length > 0">
+  <div *ngFor="let square of boardGame?.squares">
+    {{square.id}} -
+  </div>
+</div>
+<br><br>
+<button (click)="startBoardGame()">Play</button>
+<br>
+<button (click)="getPlayers()">Show players</button>
